@@ -1,0 +1,9 @@
+work/
+transcript
+*.wlf
+*.vcd
+*.log
+*.out
+.DS_Store
+Thumbs.db
+*.swp
