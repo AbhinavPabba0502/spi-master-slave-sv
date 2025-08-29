@@ -2,7 +2,7 @@
 
 
 
-A synthesizable \*\*SPI Master\*\* and \*\*SPI Slave\*\* in \*\*SystemVerilog\*\*, configured for \*\*Mode 0\*\* (CPOL=0, CPHA=0), with a \*\*self-checking testbench\*\*.  
+A synthesizable SPI Master and SPI Slave in SystemVerilog, configured for Mode 0 (CPOL=0, CPHA=0), with a self-checking testbench.  
 
 This project demonstrates protocol design, RTL coding, and verification skills for ASIC/FPGA workflows.
 
@@ -12,11 +12,11 @@ This project demonstrates protocol design, RTL coding, and verification skills f
 
 
 
-\## ✨ Features
+✨ Features
 
-\- \*\*8-bit transfer\*\*, MSB-first
+8-bit transfer, MSB-first
 
-\- \*\*SPI Master\*\*
+SPI Master
 
 &nbsp; - Configurable SCLK divider (`CLK\_DIV`)
 
@@ -24,15 +24,15 @@ This project demonstrates protocol design, RTL coding, and verification skills f
 
 &nbsp; - Preloads MOSI before the first rising edge (correct Mode-0 timing)
 
-\- \*\*SPI Slave\*\*
+SPI Slave
 
 &nbsp; - Preloads MISO on `SS\_n` assert
 
 &nbsp; - `rx\_valid` pulses when a full byte is received
 
-\- \*\*Mode 0 timing\*\*: drive on falling edge, sample on rising edge
+\- Mode 0 timing: drive on falling edge, sample on rising edge
 
-\- \*\*Self-checking testbench\*\* prints `SIMULATION PASSED` on success
+\- Self-checking testbench prints `SIMULATION PASSED` on success
 
 
 
@@ -40,7 +40,7 @@ This project demonstrates protocol design, RTL coding, and verification skills f
 
 
 
-\## 📂 Files
+ 📂 Files
 
 spi\_master.sv # Master RTL
 
@@ -57,20 +57,11 @@ LICENSE
 .gitignore
 
 
-
-yaml
-
-Copy
-
-Edit
-
-
-
 ---
 
 
 
-\## ▶️ Run (ModelSim/Questa)
+▶️ Run (ModelSim/Questa)
 
 From the ModelSim console:
 
@@ -80,13 +71,6 @@ do run.do
 
 Expected output:
 
-
-
-rust
-
-Copy
-
-Edit
 
 XFER  M->S: 0x3c,  S->M: 0xa5  |  master\_got=0xa5, slave\_got=0x3c
 
